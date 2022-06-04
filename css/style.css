@@ -14,13 +14,13 @@ body{
   margin: 0px 130px 198px 130px;
 }
 
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #FFFFFF;
   color: #3730A3;
-  margin-top: 87px;
 }
 
 .brand-title{
@@ -36,7 +36,7 @@ body{
   transform: rotate(30deg);
 }
 
-.navbar-links ul{
+.nav-menu{
   margin: 0;
   padding: 0;
   display: flex;
@@ -46,16 +46,15 @@ body{
   list-style: none;
 }
 
- ul a{
-  color: #6B7280;
-  padding: 12px 32px 12px 32px;
+.navbar-links li a{
+  text-decoration: none;
+  color: #3730A3;
+  padding: 1rem;
   display: block;
-  margin-left: 50px;
-  color: #6B7280;
  }
 
- a{
-  text-decoration: none;
+ .navbar-links{
+   transition: 0.7s ease;
  }
 
 .navbar-links a:hover{
@@ -66,26 +65,23 @@ body{
   margin-bottom: 0;
 }
 
-
 /* TOGGLE STYLE */
 .toggle-button{
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  margin-top: 50px;
+  cursor: pointer;
+  margin-right: 20px;
 }
- 
-.toggle-button .bar{
-  width: 100%;
+
+.bar{
+  display: block;
+  width: 25px;
   height: 3px;
-  background: black;
-  border-radius: 10px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
 }
+
 
 .navbar-links .active{
   display: flex;
@@ -94,7 +90,6 @@ body{
 .row{
   width: 100%;
   display: flex;
-  /* margin: 0px 130px 0px 130px; */
 }
 
 
@@ -105,7 +100,9 @@ body{
   padding-right: 80px;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 .info-name{
   width: 145px;
@@ -222,8 +219,6 @@ span{
   color: #4338CA;
 }
  
-
-
 .product{
   width: 1180px;
   height: 622px;
@@ -232,11 +227,9 @@ span{
 .product-img{
   width: 440px;
   height: 622px;
-  /* margin-right: 50px; */
 }
 
 .col-2{
-  /* width: 690px; */
   height: 532px;
   margin: 68px;
   text-align: start;
@@ -253,7 +246,6 @@ span{
 }
 
 .col-2 h4{
-  /* width: 103px; */
   height: 28px;
   margin-bottom: 20px;
 }
@@ -268,7 +260,7 @@ span{
 
 
 .container4 {
-width: 100%;
+ width: 100%;
 }
 
 
@@ -439,8 +431,8 @@ h2{
 }
 
 
-.container10 {
-  margin-top: 150px;
+.footer {
+  margin-top: 300px;
   width: 100%;
 }
 
@@ -452,39 +444,42 @@ h2{
     min-width: 100%;
     margin: 50px 10px;
   }
-  .toggle-button {
-    display: flex;
-    max-width: 100%;
+
+  .toggle-button{
+    display: block;
+    /* width: 100%; */
   }
 
-  .navbar-links {
-    display: none;
-    width: 100%;
+  .toggle-button.active .bar:nth-child(2){
+    opacity: 0;
   }
 
-  .navbar{
+  .toggle-button.active .bar:nth-child(1){
+    transform: translateX(45px) rotate(5deg);
+  } 
+
+  .toggle-button.active .bar:nth-child(3){
+    transform: translateX(-45px) rotate(-5deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 112px;
+    gap: 0;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    margin: 10px 0px 20px 10px;
-  
-  }
-
-  .toggle-button ul{
+    background-color: white;
     width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-links li{
     text-align: center;
+    transition: 0.3s;
   }
 
-  .navbar-links li a{
-    padding: .5rem 1rem;
+  .nav-item{
+    margin: 16px 0;
   }
 
-  .navbar-links .active{
-    display: flex;
+  .nav-menu.active{
+    left: 0;
   }
 
 
@@ -514,6 +509,10 @@ h2{
 
    #info-name{
     margin: 0px 180px 20px 56px;
+  }
+
+  .info-name:before{
+    display: none;
   }
 
  h1{
@@ -683,7 +682,7 @@ h2{
   
   
 
-  .container10 img {
+  .footer img {
     width: 100%;
     margin-top: 200px;
     }
