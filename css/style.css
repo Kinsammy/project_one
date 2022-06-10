@@ -119,7 +119,7 @@ body{
 }
 
 .infore-name{
-  width: 50%;
+  width: 41.66%;
 }
 
 .info-name:before{
@@ -200,7 +200,7 @@ hr {
 }
 
  .info-img{
-  width: 50%;
+  width: 58.33%;
   height: 525px;
   border-radius: 6px; 
 }
