@@ -13,6 +13,7 @@ body{
 }
 
 .container {
+  width: 100%;
   margin: 0px 130px 198px 130px;
 }
 
@@ -99,12 +100,9 @@ body{
 
 .info-content{
   width: 100%;
-  height: auto;
-  margin-right: 106px;
-  margin-right: 80px;
   margin-bottom: 150px;
   display: flex;
-  border: 2px solid red;
+  margin-top: 150px;
 }
 
 .info-name{
@@ -129,8 +127,7 @@ body{
   width: 102px;
   height: 1px;
   background: #3730A3;
-  left: 130px;
-  right: 10px;
+  
   margin: 14px 0;
   position: absolute;
 }
@@ -205,14 +202,13 @@ hr {
 
  .info-img{
   width: 41.67%;
-  height: 525px;
+  height: auto;
   border-radius: 6px; 
 }
 
 #job{
   font-size: smaller;
 }
-
 
 .product-row{
   width: 100%;
@@ -252,18 +248,17 @@ span{
 }
 
 .col-2{
+  width: 50%;
   height: 532px;
   margin: 68px;
   text-align: start;
 }
 
 .product-content{
-  width: 25%;
   margin-left: 30px;
 }
 
 .product-other{
-  width: 25%;
   margin-left: 30px;
 }
 
@@ -282,6 +277,7 @@ span{
 .brand-logos {
   width: 100%;
 }
+
 
 
 .content{
@@ -443,7 +439,6 @@ span{
   height: auto;
 }
 
-
 @media (max-width: 960px) {
   body{
    max-width: 100% !important;
@@ -499,7 +494,7 @@ span{
 
   .info-content{
     display: block;
-    margin-bottom: 700px;
+    /* margin-bottom: 700px; */
   }
   
   .info-name{
@@ -562,7 +557,7 @@ span{
   line-height: 30px;
 }
 
-content-img{
+.content-img{
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
@@ -614,4 +609,12 @@ content-img{
 .footer img{
   width: 100%;
 }
+}
+
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 }
